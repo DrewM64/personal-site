@@ -1,0 +1,43 @@
+body {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.658); /* Page background */
+  margin: 0;
+  padding: 0;
+}
+
+/* background image layer  */
+body::before {
+  content: "";
+  position: fixed;
+  top: 10vw;
+  left: 0;
+  height: 40vw;
+  width: 40vw;
+  background-image: url("./images/Nova pose transp.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+  opacity: 0.2; /* image opacity */
+  pointer-events: none; /* doesn't block clicks */
+  z-index: -1; /* Keeps it behind content */
+}
+
+/* body {
+  background-image: url("./images/Nova\ pose\ transp.png");
+  background-repeat: no-repeat;
+  background-size: 40vw;
+  background-position-y: 10vw;
+  background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 0.658);
+} */
+
+h1 {
+  font-family: "Brush Script MT", cursive;
+}
+
+@media screen and (max-width: 768px) {
+  body::before {
+    height: 400px;
+    width: 400px;
+  }
+}
